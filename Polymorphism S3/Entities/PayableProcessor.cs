@@ -21,7 +21,10 @@ namespace Polymorphism_S3.Entities
 
         public void Process(List<IPayAble> payables)
         {
-           salesAccount = 
+            foreach(IPayAble payable in payables)
+            {
+                salesAccount.Deposit(payable.GetAmount());
+            }
         }
     }
 }

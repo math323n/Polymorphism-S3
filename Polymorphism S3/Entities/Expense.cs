@@ -16,7 +16,7 @@ namespace Polymorphism_S3.Entities
             Amount = amount;
         }
 
-        protected DateTime Date
+        public DateTime Date
         {
             get
             {
@@ -29,7 +29,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        protected decimal Amount
+        public decimal Amount
         {
             get
             {
@@ -49,7 +49,7 @@ namespace Polymorphism_S3.Entities
 
         public virtual decimal GetAmount()
         {
-            throw new NotImplementedException();
+            return amount;
         }
     }
 }
