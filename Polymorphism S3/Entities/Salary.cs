@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public class Salary : Expense
+    public class Salary: Expense
     {
         protected int employeeId;
         protected int month;
         protected int year;
         protected byte salaryCode;
 
-        protected Salary(int employeeId, int month, int year, byte salaryCode, DateTime date, decimal amount)
-            :base(date, amount)
+        public Salary(int employeeId, int month, int year, byte salaryCode, DateTime date, decimal amount)
+            : base(date, amount)
         {
             EmployeeId = employeeId;
             Month = month;

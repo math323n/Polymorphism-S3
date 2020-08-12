@@ -41,5 +41,11 @@ namespace Polymorphism_S3.Entities
             }
         }
 
+        public override string ToString()
+        {
+            return $"name: {name}" +
+                $"Unit price: {unitPrice}";
+        }
+
     }
 }

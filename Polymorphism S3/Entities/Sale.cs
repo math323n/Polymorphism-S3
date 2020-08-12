@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public abstract class Sale : IPayable
+    public abstract class Sale : IPayAble
     {
         protected DateTime date;
         protected int employeeId;

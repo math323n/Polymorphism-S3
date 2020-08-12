@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public class ProductSale : Sale
+    public class ProductSale: Sale
     {
-        protected Dictionary<Product, int> productQuantities = new Dictionary<Product, int>();
+        protected static Dictionary<Product, int> productQuantities = new Dictionary<Product, int>();
 
-        protected ProductSale(Dictionary<Product, int> productQuantities, DateTime date, int employeeId)
-            :base(date, employeeId)
+        public  ProductSale(Dictionary<Product, int> productQuantities, DateTime date, int employeeId)
+            : base(date, employeeId)
         {
             ProductQuantities = productQuantities;
         }
 
-        protected Dictionary<Product, int> ProductQuantities
+        public Dictionary<Product, int> ProductQuantities
         {
             get
             {
@@ -29,7 +28,7 @@ namespace Polymorphism_S3.Entities
 
         public static void Add(Product product, int quantity)
         {
-            throw new NotImplementedException();
+            productQuantities.Add(product, quantity);
         }
     }
 }

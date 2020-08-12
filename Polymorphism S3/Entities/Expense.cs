@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public abstract class Expense : IPayable
+    public class Expense : IPayAble
     {
         protected DateTime date;
         protected decimal amount;

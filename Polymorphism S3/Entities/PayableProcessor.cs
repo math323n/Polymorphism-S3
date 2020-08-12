@@ -19,9 +19,9 @@ namespace Polymorphism_S3.Entities
 
         public Account ExpensesAccount { get; set; }
 
-        public static void Process(List<IPayable> payables)
+        public void Process(List<IPayAble> payables)
         {
-            throw new NotImplementedException();
+           salesAccount = 
         }
     }
 }
