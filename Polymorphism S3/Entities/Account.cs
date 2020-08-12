@@ -34,7 +34,7 @@ namespace Polymorphism_S3.Entities
 
         public void Withdraw(decimal amount)
         {
-            balance -= amount;
+            balance -= am
         }
     }
 }

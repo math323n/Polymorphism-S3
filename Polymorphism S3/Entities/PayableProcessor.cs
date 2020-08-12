@@ -4,8 +4,11 @@ using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public class PayableProcessor: IPayable
+    public class PayableProcessor
     {
+        private Account salesAccount;
+        private Account expensesAccount;
+
         public PayableProcessor(Account salesAccount, Account expensesAccount)
         {
             SalesAccount = salesAccount;
@@ -15,16 +18,6 @@ namespace Polymorphism_S3.Entities
         public Account SalesAccount { get; set; }
 
         public Account ExpensesAccount { get; set; }
-
-        public decimal GetAmount()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsProcessed()
-        {
-            throw new NotImplementedException();
-        }
 
         public static void Process(List<IPayable> payables)
         {

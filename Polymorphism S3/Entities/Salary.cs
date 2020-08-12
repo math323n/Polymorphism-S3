@@ -74,7 +74,15 @@ namespace Polymorphism_S3.Entities
 
         public override decimal GetAmount()
         {
-            throw new NotImplementedException();
+            return salaryCode switch
+            {
+                9 => 17000,
+                8 => 15000,
+                4 => 18000,
+                3 => 27000,
+                2 => 25000,
+                _ => 0,
+            };
         }
 
     }
