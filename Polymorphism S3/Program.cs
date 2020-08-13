@@ -36,7 +36,8 @@ namespace Polymorphism_S3
             Meme meemay = new Meme("Sut", 838438);
             Meme meemay2 = new Meme("Sut", 838438);
             Meme datBoi = new Meme("Dat boi", 4858449);
-            if(meemay.Equals(meemay2)) Console.WriteLine("Suut");
+            if(meemay.Equals(datBoi)) Console.WriteLine("Check");
+            Console.WriteLine(meemay.GetHashCode());
 
         }
 
