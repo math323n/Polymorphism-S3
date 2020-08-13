@@ -30,7 +30,19 @@ namespace Polymorphism_S3
             processor.Process(payAbles);
             Console.WriteLine($"Expenses Account: {processor.ExpensesAccount.Balance}");
             Console.WriteLine($"Sales Account: {processor.SalesAccount.Balance}");*/
-            TestEqual();
+          //  TestEqual();
+            TestHashCode();
+        }
+
+        private static void TestHashCode()
+        {
+            // Different objects same string same hascode.
+            string a1 = "abc";
+            string a2 = "abc";
+            Console.WriteLine(a1.GetHashCode());
+            Console.WriteLine(a2.GetHashCode());
+
+
         }
 
         private static void TestEqual()
@@ -47,9 +59,20 @@ namespace Polymorphism_S3
 
             if(a1.Equals(a2)) Console.WriteLine("3");
 
+            // Will fail
             try
             {
                 if(a3.Equals(a4)) Console.WriteLine("4");
+            }
+            catch(System.NullReferenceException e)
+            {
+                Console.WriteLine(e);
+            }
+
+            // Will not fail
+            try
+            {
+                if(a3 == a4) Console.WriteLine("4");
             }
             catch(System.NullReferenceException e)
             {
