@@ -41,10 +41,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        public virtual decimal GetAmount()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract decimal GetAmount();
 
         public virtual bool IsProcessed()
         {

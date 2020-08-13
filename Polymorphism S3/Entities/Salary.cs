@@ -18,7 +18,7 @@ namespace Polymorphism_S3.Entities
             SalaryCode = salaryCode;
         }
 
-        protected int EmployeeId
+        public int EmployeeId
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        protected int Month
+        public int Month
         {
             get
             {
@@ -44,7 +44,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        protected int Year
+        public int Year
         {
             get
             {
@@ -57,7 +57,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        protected byte SalaryCode
+        public byte SalaryCode
         {
             get
             {

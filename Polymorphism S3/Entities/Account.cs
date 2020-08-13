@@ -14,7 +14,7 @@ namespace Polymorphism_S3.Entities
         }
 
 
-        public decimal Balance
+        public virtual decimal Balance
         {
             get
             {
@@ -27,15 +27,16 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        public void Deposit(decimal amount)
+        public virtual void Deposit(decimal amount)
         {
             balance += amount;
         }
 
-        public void Withdraw(decimal amount)
+        public virtual void Withdraw(decimal amount)
         {
             balance -= amount;
         }
+
 
     }
 }

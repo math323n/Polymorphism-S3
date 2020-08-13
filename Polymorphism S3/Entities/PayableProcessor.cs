@@ -15,13 +15,33 @@ namespace Polymorphism_S3.Entities
             ExpensesAccount = expensesAccount;
         }
 
-        public Account SalesAccount { get; set; }
-
-        public Account ExpensesAccount { get; set; }
-
-        public void Process(List<IPayAble> payables)
+        public Account SalesAccount
         {
-            foreach(IPayable payable in payables)
+            get
+            {
+                return salesAccount;
+            }
+            set
+            {
+                salesAccount = value;
+            }
+        }
+
+        public Account ExpensesAccount
+        {
+            get
+            {
+                return expensesAccount;
+            }
+            set
+            {
+                expensesAccount = value;
+            }
+        }
+
+        public virtual void Process(List<IPayAble> payables)
+        {
+            foreach(IPayAble payable in payables)
             {
                 switch(payable is Sale)
                 {
@@ -29,15 +49,14 @@ namespace Polymorphism_S3.Entities
                         // Withdraw the expense
                         salesAccount.Deposit(payable.GetAmount());
                         // Set IsProcessed to true
-                        payable.IsProcessed = true;
-                        // Stop
+
+
                         break;
                     case false:
                         // Withdraw the expense
                         expensesAccount.Withdraw(payable.GetAmount());
-                        // Set IsProcessed to true
-                        payable.IsProcessed = true;
-                        // Stop
+
+
                         break;
                 }
             }

@@ -13,7 +13,7 @@ namespace Polymorphism_S3.Entities
         }
 
 
-        protected decimal Amount
+        public decimal Amount
         {
             get
             {
@@ -24,6 +24,10 @@ namespace Polymorphism_S3.Entities
             {
                 amount = value;
             }
+        }
+        public override decimal GetAmount()
+        {
+            return amount;
         }
     }
 }
