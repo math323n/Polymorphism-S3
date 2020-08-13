@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Polymorphism_S3.Entities
 {
-    public abstract class Sale : IPayAble
+    public abstract class Sale: IPayable
     {
         protected DateTime date;
         protected int employeeId;
@@ -56,7 +54,5 @@ namespace Polymorphism_S3.Entities
         }
 
         public abstract decimal GetAmount();
-
-       
     }
 }

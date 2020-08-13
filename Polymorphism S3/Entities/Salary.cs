@@ -82,6 +82,5 @@ namespace Polymorphism_S3.Entities
                 _ => 0,
             };
         }
-
     }
 }

@@ -7,7 +7,7 @@ namespace Polymorphism_S3.Entities
     {
         protected static Dictionary<Product, int> productQuantities = new Dictionary<Product, int>();
 
-        public  ProductSale(Dictionary<Product, int> productQuantities, DateTime date, int employeeId)
+        public ProductSale(Dictionary<Product, int> productQuantities, DateTime date, int employeeId)
             : base(date, employeeId)
         {
             ProductQuantities = productQuantities;
@@ -30,6 +30,10 @@ namespace Polymorphism_S3.Entities
         {
             productQuantities.Add(product, quantity);
         }
+        /// <summary>
+        /// Get amount
+        /// </summary>
+        /// <returns TotalPrice></returns>
         public override decimal GetAmount()
         {
             decimal totalPrice = 0;

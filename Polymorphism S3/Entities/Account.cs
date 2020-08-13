@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Polymorphism_S3.Entities
+﻿namespace Polymorphism_S3.Entities
 {
     public class Account
     {
@@ -36,7 +32,6 @@ namespace Polymorphism_S3.Entities
         {
             balance -= amount;
         }
-
 
     }
 }
