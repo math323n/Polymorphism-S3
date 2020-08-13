@@ -63,7 +63,12 @@ namespace Polymorphism_S3.Entities
             {
                 return false;
             }
-
+            // Check if object is same
+            if(ReferenceEquals(this, other))
+            {
+                return true;
+            }
+   
             return string.Equals(name, other.name) && Worth == other.Worth;
         }
 
@@ -74,22 +79,8 @@ namespace Polymorphism_S3.Entities
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            // Null check
-            if(obj is null)
-            {
-                return false;
-            }
-
-            // Check if object is same
-            if(ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-
-
             //Conditional expression
-            return obj.GetType() != GetType() ? false : Equals(obj as Meme);
+            return Equals(obj as Meme);
         }
 
         public override int GetHashCode()
