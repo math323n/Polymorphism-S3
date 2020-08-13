@@ -15,7 +15,7 @@ namespace Polymorphism_S3.Entities
             UnitPrice = unitPrice;
         }
 
-        protected string Name
+        public string Name
         {
             get
             {
@@ -28,7 +28,7 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        protected decimal UnitPrice
+        public decimal UnitPrice
         {
             get
             {

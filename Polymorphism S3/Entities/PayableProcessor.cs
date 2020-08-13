@@ -21,9 +21,25 @@ namespace Polymorphism_S3.Entities
 
         public void Process(List<IPayAble> payables)
         {
-            foreach(IPayAble payable in payables)
+            foreach(IPayable payable in payables)
             {
-                salesAccount.Deposit(payable.GetAmount());
+                switch(payable is Sale)
+                {
+                    case true:
+                        // Withdraw the expense
+                        salesAccount.Deposit(payable.GetAmount());
+                        // Set IsProcessed to true
+                        payable.IsProcessed = true;
+                        // Stop
+                        break;
+                    case false:
+                        // Withdraw the expense
+                        expensesAccount.Withdraw(payable.GetAmount());
+                        // Set IsProcessed to true
+                        payable.IsProcessed = true;
+                        // Stop
+                        break;
+                }
             }
         }
     }

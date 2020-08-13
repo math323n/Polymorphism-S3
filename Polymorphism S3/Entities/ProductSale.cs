@@ -30,5 +30,16 @@ namespace Polymorphism_S3.Entities
         {
             productQuantities.Add(product, quantity);
         }
+        public override decimal GetAmount()
+        {
+            decimal totalPrice = 0;
+
+            foreach(KeyValuePair<Product, int> product in productQuantities)
+            {
+                totalPrice += (Convert.ToDecimal(product.Value) * product.Key.UnitPrice);
+            }
+
+            return totalPrice;
+        }
     }
 }
