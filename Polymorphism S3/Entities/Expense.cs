@@ -8,6 +8,7 @@ namespace Polymorphism_S3.Entities
     {
         protected DateTime date;
         protected decimal amount;
+        protected bool isProcessed;
 
 
         public Expense(DateTime date, decimal amount)
@@ -42,9 +43,17 @@ namespace Polymorphism_S3.Entities
             }
         }
 
-        public virtual bool IsProcessed()
+        public bool IsProcessed
         {
-            throw new NotImplementedException();
+            get
+            {
+                return isProcessed;
+            }
+
+            set
+            {
+                isProcessed = value;
+            }
         }
 
         public virtual decimal GetAmount()

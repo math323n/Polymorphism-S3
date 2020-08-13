@@ -49,14 +49,14 @@ namespace Polymorphism_S3.Entities
                         // Withdraw the expense
                         salesAccount.Deposit(payable.GetAmount());
                         // Set IsProcessed to true
-
+                        payable.IsProcessed = true;
 
                         break;
                     case false:
                         // Withdraw the expense
                         expensesAccount.Withdraw(payable.GetAmount());
-
-
+                        // Set IsProcessed to true
+                        payable.IsProcessed = true;
                         break;
                 }
             }

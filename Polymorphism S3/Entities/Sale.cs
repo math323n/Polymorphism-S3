@@ -8,6 +8,7 @@ namespace Polymorphism_S3.Entities
     {
         protected DateTime date;
         protected int employeeId;
+        protected bool isProcessed;
 
         protected Sale(DateTime date, int employeeId)
         {
@@ -41,11 +42,21 @@ namespace Polymorphism_S3.Entities
             }
         }
 
+        public bool IsProcessed
+        {
+            get
+            {
+                return isProcessed;
+            }
+
+            set
+            {
+                isProcessed = value;
+            }
+        }
+
         public abstract decimal GetAmount();
 
-        public virtual bool IsProcessed()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
