@@ -89,13 +89,13 @@ namespace Polymorphism_S3.Entities
           unchecked
             {
                 // Method One
-                
+                /*
                 var hashCode = 13;
                 hashCode = (hashCode * 397) ^ number;
                 var stringHashCode = !string.IsNullOrEmpty(name) ? name.GetHashCode() : 0;
                 hashCode = (hashCode * 397) ^ stringHashCode;
-                return hashCode;
-                /*
+                return hashCode;*/
+                
                 // Method Two
                 // int to store hash
                 int hash = (int)2166136261;
@@ -104,7 +104,7 @@ namespace Polymorphism_S3.Entities
                 hash = (hash * 16777619) ^ name.GetHashCode();
                 hash = (hash * 16777619) ^ worth.GetHashCode();
                 hash = (hash * 16777619) ^ number.GetHashCode();
-                return hash;*/
+                return hash;
             }
         }
         #endregion
